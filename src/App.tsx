@@ -234,7 +234,7 @@ export default function App() {
           <img 
             src="https://renowix.in/wp-content/uploads/2026/06/Picsart_26-06-25_14-06-12-482.jpg" 
             alt="Luxury Woodwork Background"
-            className="w-full h-full object-cover object-center opacity-90 scale-100 filter brightness-100 contrast-100"
+            className="w-full h-full object-cover object-center opacity-90 scale-100 filter brightness-90 contrast-100"
           />
           {/* Walnut / Charcoal rich visual gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/50 via-[#1A110D]/40 to-[#121212]"></div>
