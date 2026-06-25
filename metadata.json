@@ -1,0 +1,6 @@
+{
+  "name": "Home Decor Experts",
+  "description": "Premium Carpentry & Bespoke Woodwork in Noida, Greater Noida, and Ghaziabad. Expert craftsmanship, transparent pricing, and premium materials.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
