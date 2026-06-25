@@ -13,6 +13,7 @@ export interface ServiceItem {
   description: string;
   features: string[];
   icon: string; // Lucide icon name
+  imageUrl: string; // Unsplash image url
 }
 
 export interface TrustPillar {
@@ -23,11 +24,12 @@ export interface TrustPillar {
 
 export const BUSINESS_INFO = {
   name: "Home Decor Experts",
+  owner: "Zafar Ali",
   tagline: "Premium Carpentry & Bespoke Woodwork",
   logoUrl: "https://renowix.in/wp-content/uploads/2026/06/file_000000003f7c7208a036d59c5c3dd127.png",
   phone: "7466939076",
   phoneFormatted: "+91-7466939076",
-  whatsappUrl: "https://wa.me/917466939076?text=Hi%20Home%20Decor%20Experts!%20I%20would%20like%20to%20get%20a%20quote%20for%20premium%20woodwork/carpentry.",
+  whatsappUrl: "https://wa.me/917466939076?text=Hi%20Zafar%20Ali!%20I%20saw%20your%20website%20Complete%20Home%20Decor%20Experts%20and%20would%20like%20to%20get%20a%20quote%20for%20premium%20woodwork/carpentry.",
   areas: ["Noida", "Greater Noida", "Ghaziabad", "Delhi NCR"],
   accentColor: "#C5A059",
   primaryBg: "#1F1F1F"
@@ -39,28 +41,32 @@ export const SERVICES: ServiceItem[] = [
     title: "Custom Furniture & Wardrobes",
     description: "Tailor-made closets, elegant walk-in wardrobes, beds, and study desks designed with space-saving layouts and flawless premium finishes.",
     features: ["Hettich & Blum soft-close fittings", "Waterproof plywood & wood veneers", "Custom internal storage organization"],
-    icon: "Armchair"
+    icon: "Armchair",
+    imageUrl: "https://renowix.in/wp-content/uploads/2026/06/Picsart_26-06-25_13-44-21-835.jpg"
   },
   {
     id: "modular-kitchens",
     title: "Modular Kitchen Installation",
     description: "Ergonomic, modern cooking spaces featuring customized pull-out drawers, premium laminates, high-end hardware, and seamless profiles.",
     features: ["Aesthetic acrylic & PU finishes", "Corian or Quartz counter integrations", "Smart corner organizer setups"],
-    icon: "ChefHat"
+    icon: "ChefHat",
+    imageUrl: "https://renowix.in/wp-content/uploads/2026/06/Picsart_26-06-25_13-42-31-076.jpg"
   },
   {
     id: "flooring-paneling",
     title: "Wooden Flooring & Wall Paneling",
     description: "Transform plain walls and cold floors into inviting masterpieces using high-density wooden planks, luxury fluted panels, and custom TV backdrops.",
     features: ["Engineered hardwood & laminate options", "Sound-dampening fluted panels", "Precise floor leveling & underlayments"],
-    icon: "Layers"
+    icon: "Layers",
+    imageUrl: "https://renowix.in/wp-content/uploads/2026/06/Picsart_26-06-25_13-43-34-560.jpg"
   },
   {
     id: "home-renovation",
     title: "Full-Home Renovation & Repair",
     description: "Complete overhaul of old woodwork, door repairs, lock installations, and structural enhancements executed with absolute attention to detail.",
     features: ["Professional on-site carpentry crews", "Structural and hardware replacements", "Flawless wood polishing & restoration"],
-    icon: "Wrench"
+    icon: "Wrench",
+    imageUrl: "https://renowix.in/wp-content/uploads/2026/06/Picsart_26-06-25_13-41-46-204-1.jpg"
   }
 ];
 

@@ -94,11 +94,11 @@ export default function App() {
                   }}
                 />
                 <div className="flex flex-col">
-                  <span className="font-serif text-lg font-bold tracking-tight text-white leading-none">
-                    HOME DECOR
+                  <span className="font-serif text-sm sm:text-base font-bold tracking-tight text-white leading-none uppercase">
+                  Home Decor Experts
                   </span>
-                  <span className="text-[10px] text-[#C5A059] font-mono tracking-widest uppercase font-semibold">
-                    EXPERTS
+                  <span className="text-[10px] text-[#C5A059] font-mono tracking-widest uppercase font-semibold mt-1">
+                    By Zafar Ali
                   </span>
                 </div>
               </a>
@@ -145,7 +145,7 @@ export default function App() {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#C5A059] text-[#121212] font-semibold text-sm hover:bg-[#DBC18C] transition-all duration-300 hover:shadow-lg hover:shadow-[#C5A059]/10 hover:-translate-y-0.5"
               >
                 <Phone className="w-4 h-4 fill-current" />
-                <span>Call Now: {BUSINESS_INFO.phoneFormatted}</span>
+                <span>Call Now</span>
               </a>
             </div>
 
@@ -209,7 +209,7 @@ export default function App() {
                     className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-[#C5A059] text-[#121212] font-semibold"
                   >
                     <Phone className="w-4 h-4 fill-current" />
-                    <span>Call Now: {BUSINESS_INFO.phone}</span>
+                    <span>Call Now</span>
                   </a>
                   <a
                     href={BUSINESS_INFO.whatsappUrl}
@@ -232,17 +232,19 @@ export default function App() {
         {/* Background Image / Woodcraft styling overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://renowix.in/wp-content/uploads/2026/06/IMG-20260623-WA0027.jpg" 
+            src="https://renowix.in/wp-content/uploads/2026/06/Picsart_26-06-25_14-06-12-482.jpg" 
             alt="Luxury Woodwork Background"
-            className="w-full h-full object-cover object-center opacity-25 scale-105 filter brightness-75 contrast-125"
+            className="w-full h-full object-cover object-center opacity-90 scale-100 filter brightness-100 contrast-100"
           />
           {/* Walnut / Charcoal rich visual gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/80 via-[#1A110D]/90 to-[#121212]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/50 via-[#1A110D]/40 to-[#121212]"></div>
+          {/* Central radial gradient to make the center text pop while leaving the side image visible */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(18,18,18,0.1)_0%,rgba(18,18,18,0.7)_90%)]"></div>
           {/* Fine subtle lines mirroring precision grids */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#C5A05908_1px,transparent_1px),linear-gradient(to_bottom,#C5A05908_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pb-28 text-center flex flex-col items-center">
           
           {/* Tagline Badge */}
           <motion.div 
@@ -277,32 +279,20 @@ export default function App() {
             <span className="text-white font-medium">Noida, Greater Noida, and Ghaziabad</span> with expert architectural craftsmanship.
           </motion.p>
 
-          {/* Dual CTAs (Side-by-Side) */}
+          {/* Streamlined Hero CTA (Call Now) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+            className="w-full sm:w-auto"
           >
-            {/* Primary CTA (WhatsApp) */}
-            <a 
-              href={BUSINESS_INFO.whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#25D366] text-white font-semibold text-base shadow-lg shadow-[#25D366]/10 hover:bg-[#20ba59] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group"
-            >
-              <MessageCircle className="w-5.5 h-5.5 fill-current" />
-              <span>Chat on WhatsApp</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
-
-            {/* Secondary CTA (Direct Call) */}
             <a 
               href={`tel:${BUSINESS_INFO.phone}`}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-transparent border-2 border-[#C5A059] text-white font-semibold text-base hover:bg-[#C5A059]/10 transition-all duration-300 hover:-translate-y-1"
+              className="inline-flex items-center justify-center gap-3 px-10 py-4.5 rounded-full bg-gradient-to-r from-[#E5C07B] via-[#C5A059] to-[#9B7C3E] text-[#121212] font-semibold text-base shadow-xl shadow-[#C5A059]/20 hover:brightness-110 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#C5A059]/35 group"
             >
-              <Phone className="w-5 h-5 fill-current text-[#C5A059]" />
-              <span>Call Now: {BUSINESS_INFO.phone}</span>
+              <Phone className="w-5 h-5 fill-current" />
+              <span>Call Now</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
           </motion.div>
 
@@ -311,7 +301,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="mt-16 flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-xs font-mono text-gray-400 uppercase tracking-wider"
+            className="mt-12 flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-xs font-mono text-gray-400 uppercase tracking-wider"
           >
             <span className="flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 text-[#C5A059]" /> Noida
@@ -325,17 +315,17 @@ export default function App() {
               <MapPin className="w-3.5 h-3.5 text-[#C5A059]" /> Ghaziabad
             </span>
           </motion.div>
+        </div>
 
-          {/* Mouse scroll indicator */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer opacity-70 hover:opacity-100 transition-opacity" onClick={() => handleScrollTo("services")}>
-            <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A059]">Scroll Down</span>
-            <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex items-start justify-center p-1.5">
-              <motion.div 
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                className="w-1 h-2 rounded-full bg-[#C5A059]"
-              ></motion.div>
-            </div>
+        {/* Mouse scroll indicator positioned relative to the full header for absolute precision */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 cursor-pointer opacity-70 hover:opacity-100 transition-opacity" onClick={() => handleScrollTo("services")}>
+          <span className="text-[10px] font-mono uppercase tracking-widest text-[#C5A059]">Scroll Down</span>
+          <div className="w-6 h-10 border-2 border-[#C5A059]/40 rounded-full flex items-start justify-center p-1.5">
+            <motion.div 
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="w-1 h-2 rounded-full bg-[#C5A059]"
+            ></motion.div>
           </div>
         </div>
       </header>
@@ -367,45 +357,60 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-[#211B18] border border-[#C5A059]/10 rounded-2xl p-6 flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 group hover:shadow-2xl hover:shadow-[#121212] hover:-translate-y-1"
+                className="bg-[#211B18] border border-[#C5A059]/10 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 group hover:shadow-2xl hover:shadow-[#121212] hover:-translate-y-1"
               >
                 <div>
-                  {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#C5A059]/10 border border-[#C5A059]/20 flex items-center justify-center text-[#C5A059] mb-6 group-hover:bg-[#C5A059] group-hover:text-[#121212] transition-all duration-300">
-                    {renderIcon(service.icon, "w-6 h-6")}
+                  {/* Image Header with Elegant Overlay */}
+                  <div className="relative h-44 w-full overflow-hidden bg-[#2A2421]">
+                    <img 
+                      src={service.imageUrl} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#211B18] via-[#211B18]/20 to-transparent"></div>
+                    
+                    {/* Floating Icon badge on top of image */}
+                    <div className="absolute bottom-3 left-4 w-10 h-10 rounded-lg bg-[#C5A059]/90 backdrop-blur text-[#121212] flex items-center justify-center shadow-md">
+                      {renderIcon(service.icon, "w-5 h-5")}
+                    </div>
                   </div>
 
-                  {/* Title */}
-                  <h3 className="font-serif text-xl font-bold text-white mb-3 group-hover:text-[#C5A059] transition-colors">
-                    {service.title}
-                  </h3>
+                  {/* Card Content */}
+                  <div className="p-6">
+                    {/* Title */}
+                    <h3 className="font-serif text-xl font-bold text-white mb-3 group-hover:text-[#C5A059] transition-colors">
+                      {service.title}
+                    </h3>
 
-                  {/* Description */}
-                  <p className="text-gray-400 text-sm font-light leading-relaxed mb-6">
-                    {service.description}
-                  </p>
+                    {/* Description */}
+                    <p className="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                      {service.description}
+                    </p>
 
-                  {/* Feature Bullets */}
-                  <ul className="space-y-2 mb-8">
-                    {service.features.map((feature, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2 text-xs text-gray-300">
-                        <Check className="w-3.5 h-3.5 text-[#C5A059] mt-0.5 shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    {/* Feature Bullets */}
+                    <ul className="space-y-2">
+                      {service.features.map((feature, fIdx) => (
+                        <li key={fIdx} className="flex items-start gap-2 text-xs text-gray-300">
+                          <Check className="w-3.5 h-3.5 text-[#C5A059] mt-0.5 shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
                 {/* Direct Quote WhatsApp CTA */}
-                <a 
-                  href={`https://wa.me/917466939076?text=${encodeURIComponent(`Hi Home Decor Experts! I'm interested in your "${service.title}" services.`)}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-[#C5A059] font-mono uppercase tracking-wider group-hover:text-white transition-colors mt-auto font-semibold"
-                >
-                  <span>Inquire Now</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                </a>
+                <div className="px-6 pb-6 pt-2">
+                  <a 
+                    href={`https://wa.me/917466939076?text=${encodeURIComponent(`Hi Home Decor Experts! I'm interested in your "${service.title}" services.`)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-[#C5A059] font-mono uppercase tracking-wider group-hover:text-white transition-colors font-semibold"
+                  >
+                    <span>Inquire Now</span>
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -694,7 +699,7 @@ export default function App() {
               className="flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4.5 rounded-xl bg-transparent border-2 border-[#C5A059] text-white font-bold text-base hover:bg-[#C5A059]/10 transition-all duration-300 hover:-translate-y-1"
             >
               <Phone className="w-5.5 h-5.5 fill-current text-[#C5A059]" />
-              <span>Call Direct: {BUSINESS_INFO.phoneFormatted}</span>
+              <span>Call Direct</span>
             </a>
           </div>
 
